@@ -4,14 +4,12 @@ Fix the `cutestCat` function. Should return the cat with the highest `cuteness`
 rating.
 
 */
-
 function cutestCat(cats) {
-  let cutest;
-  let i = 0;
-
+  let cutest = cats[0];
+  let i = 1;
   while (i < cats.length) {
     const cat = cats[i];
-    if (cat > cutest) {
+    if (cat.cuteness > cutest) {
       cutest = cat.cuteness;
     }
     i++;
